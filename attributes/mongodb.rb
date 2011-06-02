@@ -24,7 +24,7 @@ default[:mongodb][:server][:dir]                   = "/opt/mongodb-#{mongodb[:ve
 default[:mongodb][:server][:logpath]               = "/var/log/mongodb.log"
 default[:mongodb][:server][:pidfile]               = "/var/lib/mongodb/mongod.lock"
 default[:mongodb][:server][:port]                  = 27017
-default[:mongodb][:server][:system_init]           = "sysv"
+default[:mongodb][:server][:system_init]           = "upstart"
 
 ### EXTRA
 default[:mongodb][:server][:auth]                  = false
@@ -91,7 +91,7 @@ default[:mongodb][:config_server][:logpath] = "/var/log/mongodb-config.log"
 default[:mongodb][:config_server][:pidfile] = "/var/run/mongodb-config.pid"
 default[:mongodb][:config_server][:port]    = 27019
 default[:mongodb][:config_server][:verbose] = false
-
+default[:mongodb][:config_server][:system_init] = "upstart"
 
 
 ##########################################################################
@@ -102,3 +102,4 @@ default[:mongodb][:mongos][:logpath] = "/var/log/mongos.log"
 default[:mongodb][:mongos][:pidfile] = "/var/run/mongos.pid"
 default[:mongodb][:mongos][:port]    = 27017
 default[:mongodb][:mongos][:verbose] = false
+default[:mongodb][:mongos][:system_init] = "upstart"
