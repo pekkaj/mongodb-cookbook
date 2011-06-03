@@ -37,7 +37,7 @@ script
   SHARDSVR=<%= node[:mongodb][:shard_server] %>
   <% end %>
 
-  <% unless server_type == 'mongos' %>
+  <% unless @server_type == 'mongos' %>
   REST=<%= node[:mongodb][:rest] %>
   SYNCDELAY="--syncdelay <%= node[:mongodb][:syncdelay] %>"
   <% end %>
