@@ -28,7 +28,7 @@ script
   CONF=<%= @config[:config] %>
   PIDFILE=<%= @config[:pidfile] %>
 
-  <% case server_type; when 'config_server' %>
+  <% case @server_type; when 'config_server' %>
   CONFIGSVR=--configsvr
   <% when 'mongos' %>
   CONFIGDB="--configdb <%= @configdb_server_list %>"
